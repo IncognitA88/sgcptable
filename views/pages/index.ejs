@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv = "refresh" content="10">
+    <title> Singapore Carpark Data </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+<h1> Carpark Availability  </h1>
+<table class="table table-bordered width=50%">
+    <tr>
+        <th> Carpark Category </th>
+        <th> Lowest/Highest Available Lots </th>
+        <th > Carpark Numbers </th>     
+    </tr>
+    <tbody>
+    <tr>
+        <% cps.forEach( (cp) => { %>
+        <td> <%=cp.size %></td>
+        <td> <%=cp.lot %></td>
+        <td> <%=cp.carparkNum %></td>
+    </tr> 
+        <% }) %>
+    
+</tbody>
+</table>
+</body>
